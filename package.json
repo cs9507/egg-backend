@@ -1,0 +1,26 @@
+{
+  "name": "mini-backend-egg",
+  "version": "1.0.0",
+  "description": "a backend power by egg.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "egg-bin dev"
+  },
+  "keywords": [
+    "egg",
+    "node"
+  ],
+  "author": "chenmeng",
+  "license": "ISC",
+  "dependencies": {
+    "egg": "^2.29.1",
+    "egg-mysql": "^3.0.0",
+    "egg-sequelize": "^6.0.0",
+    "mysql2": "^2.2.5"
+  },
+  "devDependencies": {
+    "egg-bin": "^4.15.0",
+    "sequelize-cli": "^6.2.0"
+  }
+}
