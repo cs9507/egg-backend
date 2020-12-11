@@ -1,4 +1,4 @@
 module.exports =  app => {
-    const { router, controller } = app;
-    router.resources('users','/users', controller.users);
+    const { router, controller} = app;
+    router.get('/', controller.users.index);
   };
