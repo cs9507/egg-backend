@@ -22,5 +22,9 @@ module.exports = (app) => {
     updated_at: DATE,
   });
 
+  User.associate = function() {
+    app.model.User.hasOne(app.model.UserInfo);
+  };
+
   return User;
 };
