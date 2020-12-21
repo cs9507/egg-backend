@@ -8,3 +8,16 @@ exports.sequelize = {
     username: 'dev',
     password: 'DETLTmJswASWtbXG',
   };
+
+  exports.io = {
+    namespace: {
+      '/': {
+        connectionMiddleware: ['auth'],
+        packetMiddleware: ['filter'],
+      },
+      '/chat': {
+        connectionMiddleware: ['auth'],
+        packetMiddleware: ['filter']
+      },
+    },
+  };
