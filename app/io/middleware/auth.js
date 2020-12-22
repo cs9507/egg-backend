@@ -1,3 +1,4 @@
+'use strict';
 module.exports = () => {
     return async (ctx, next) => {
       const {socket} = ctx;
@@ -5,8 +6,8 @@ module.exports = () => {
       const say = await ctx.service.user.say();
           // 用户信息
       const { auth } = query;
-      console.log(say,auth)
-      socket.emit('res', 'connected!');
+      console.log(auth)
+      socket.emit('res', 'auth!' + say);
       await next();
       console.log('disconnect!');
     };

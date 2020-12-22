@@ -1,8 +1,8 @@
 module.exports = () => {
   return async (ctx, next) => {
-    console.log(ctx.packet);
-    const say = await ctx.service.user.say();
-    ctx.socket.emit('res', 'packet!' + say);
+    const {socket,service} = ctx;
+    const say = await service.user.say();
+    socket.emit('res', 'packet!' + say);
     await next();
     console.log('packet response!');
   };
